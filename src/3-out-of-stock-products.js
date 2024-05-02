@@ -11,6 +11,6 @@ const getOutOfStockProducts = () => {
   return productsOutOfStock;
 };
 
-console.log(getOutOfStockProducts());
+// console.log(getOutOfStockProducts());
 
 module.exports = { getOutOfStockProducts };

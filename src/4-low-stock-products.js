@@ -1,7 +1,17 @@
 const stockProducts = require('./data.json');
 
 const getLowStockProducts = () => {
-  // Desenvolva seu código dentro dessa função...
+  let lowProductsInStock = [];
+
+  for (const product of stockProducts) {
+    if (product.quantityInStock > 0 && product.quantityInStock <= 10) {
+      lowProductsInStock.push(
+        `${product.productName}: ${product.quantityInStock} unidades`);      
+    }    
+  }
+  return lowProductsInStock;
 };
+
+// console.log(getLowStockProducts());
 
 module.exports = { getLowStockProducts };
